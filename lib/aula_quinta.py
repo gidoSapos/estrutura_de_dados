@@ -15,10 +15,8 @@ def abertura_chamado() -> str:
             if ordem_prioridade not in range(1, 6):
                 print("A prioridade deve estar entre 1 e 5. Tente novamente!")
                 continue
-
             info_user = {"id": int(id_chamado), "prioridade": ordem_prioridade}
             chamados.append(info_user)
-
             return f"O chamado {id_chamado} foi registrado com sucesso!"
 
         except ValueError:
@@ -34,6 +32,7 @@ def buscar_chamado() -> dict:
                     return info_user
             print("Chamado não encontrado.")
             return None
+        
         except ValueError:
             print("Erro: ID inválido.")
             return None
