@@ -1,7 +1,6 @@
 from lib.recursividade import fatorial, sum_list, inverter_string,\
 calcular_poupanca_dolar, formatar_resultado_dolar,\
-calcular_investimentos_bitcoin, formatar_resultado_bitcoin, calcular_investimentos_acoes,\
-calcular_investimentos_acoes, formatar_resultado_acoes
+calcular_investimentos_bitcoin, formatar_resultado_bitcoin
 
 print("¨*¨¨*"*30)
 print(fatorial(5))
@@ -13,13 +12,11 @@ print("¨*¨¨*"*30)
 print(inverter_string("anna_banana_gigi"))
 
 print("¨*¨¨*"*30)
-resultado_dolar = calcular_poupanca_dolar()
-print(formatar_resultado_dolar(resultado_dolar)) 
+metas, saldo_final, investido_final, juros_final = calcular_poupanca_dolar()
+formatar_resultado_dolar(metas, saldo_final, investido_final, juros_final)
 
 print("¨*¨¨*"*30)
-resultado_bitcoin = calcular_investimentos_bitcoin()
-print(formatar_resultado_bitcoin(resultado_bitcoin)) #os resultados só estão parecidos por causa da pré definição se não fosse dado um parametro na função
+resultado = calcular_investimentos_bitcoin()
+print(formatar_resultado_bitcoin(resultado))
 
-print("¨*¨¨*"*30)
-resultado_acoes = calcular_investimentos_acoes()
-print(formatar_resultado_acoes(resultado_acoes))
+#a questão 6 esta no recursividade.py
